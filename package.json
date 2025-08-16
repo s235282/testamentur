@@ -2,7 +2,7 @@
   "name": "testamentegenerator",
   "version": "1.0.0",
   "description": "En simpel testamentegenerator for danske borgere",
-  "homepage": "https://testamentur.dk",
+  "homepage": "https://s235282.github.io/testamentur",
   "private": true,
   "dependencies": {
     "@types/node": "^18.15.0",
