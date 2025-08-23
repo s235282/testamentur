@@ -2,7 +2,7 @@
   "name": "testamentegenerator",
   "version": "1.0.0",
   "description": "En simpel testamentegenerator for danske borgere",
-  "homepage": "http://testamentur.dk",
+  "homepage": "https://testamentur.dk",
   "private": true,
   "dependencies": {
     "@types/node": "^18.15.0",
