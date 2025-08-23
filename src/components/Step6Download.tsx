@@ -125,6 +125,55 @@ const NewWillButton = styled.button`
   }
 `;
 
+const DonationSection = styled.div`
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  border-radius: 12px;
+  padding: 2.5rem;
+  margin: 2rem 0;
+  color: white;
+  text-align: center;
+`;
+
+const DonationTitle = styled.h3`
+  color: white;
+  margin-bottom: 1rem;
+  font-size: 1.5rem;
+`;
+
+const DonationText = styled.p`
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+`;
+
+const DonationButton = styled.button`
+  background: #ff6b6b;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  padding: 1rem 2rem;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  margin: 0 0.5rem;
+  transition: all 0.2s ease;
+  
+  &:hover {
+    background: #ff5252;
+    transform: translateY(-2px);
+  }
+`;
+
+const DonationInfo = styled.div`
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+  padding: 1rem;
+  margin-top: 1rem;
+  font-size: 0.9rem;
+  color: rgba(255, 255, 255, 0.8);
+`;
+
 const Step6Download: React.FC<StepProps> = (props) => {
   const { data } = props;
 
@@ -183,6 +232,20 @@ const Step6Download: React.FC<StepProps> = (props) => {
           at du konsulterer en advokat for at sikre, at dit testamente er juridisk korrekt.
         </WarningText>
       </WarningBox>
+
+      <DonationSection>
+        <DonationTitle>💝 Støt vores arbejde</DonationTitle>
+        <DonationText>
+          Vi har hjulpet dig med at oprette dit testamente gratis. Hvis du synes, 
+          at denne service er værdifuld, kan du overveje at støtte os med en donation. 
+          Det hjælper os med at holde servicen gratis for alle.
+        </DonationText>
+        
+        <DonationInfo>
+          <strong>MobilePay: 20290178</strong><br />
+          Til Emil Sean Skovgaard
+        </DonationInfo>
+      </DonationSection>
 
       <div>
         <p style={{ color: '#666', marginBottom: '1rem' }}>
