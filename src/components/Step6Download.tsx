@@ -213,6 +213,20 @@ const Step6Download: React.FC<StepProps> = (props) => {
         Download Testamente (PDF)
       </DownloadButton>
 
+      <DonationSection>
+        <DonationTitle>💝 Støt vores arbejde</DonationTitle>
+        <DonationText>
+          Vi har hjulpet dig med at oprette dit testamente gratis. Hvis du synes, 
+          at denne service er værdifuld, kan du overveje at støtte os med en donation. 
+          Det hjælper os med at holde servicen gratis for alle.
+        </DonationText>
+        
+        <DonationInfo>
+          <strong>MobilePay: 20290178</strong><br />
+          Til Emil Sean Skovgaard
+        </DonationInfo>
+      </DonationSection>
+
       <InfoBox>
         <InfoTitle>Hvad skal du gøre nu?</InfoTitle>
         <InfoList>
@@ -232,20 +246,6 @@ const Step6Download: React.FC<StepProps> = (props) => {
           at du konsulterer en advokat for at sikre, at dit testamente er juridisk korrekt.
         </WarningText>
       </WarningBox>
-
-      <DonationSection>
-        <DonationTitle>💝 Støt vores arbejde</DonationTitle>
-        <DonationText>
-          Vi har hjulpet dig med at oprette dit testamente gratis. Hvis du synes, 
-          at denne service er værdifuld, kan du overveje at støtte os med en donation. 
-          Det hjælper os med at holde servicen gratis for alle.
-        </DonationText>
-        
-        <DonationInfo>
-          <strong>MobilePay: 20290178</strong><br />
-          Til Emil Sean Skovgaard
-        </DonationInfo>
-      </DonationSection>
 
       <div>
         <p style={{ color: '#666', marginBottom: '1rem' }}>
