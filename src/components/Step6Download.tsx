@@ -222,6 +222,9 @@ const Step6Download: React.FC<StepProps> = (props) => {
   };
 
   useEffect(() => {
+    // Scroll to top when component mounts
+    window.scrollTo(0, 0);
+    
     // Auto-download after a short delay
     const timer = setTimeout(() => {
       downloadPDF();
