@@ -5,13 +5,44 @@ import { generatePDF } from '../utils/willGenerator';
 import { StepProps } from '../types';
 
 const DownloadContainer = styled.div`
-  text-align: center;
-  padding: 3rem 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem;
   background: white;
   border-radius: 12px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   margin: 2rem auto;
-  max-width: 800px;
+  max-width: 1200px;
+  min-height: 80vh;
+`;
+
+const MainContent = styled.div`
+  display: flex;
+  width: 100%;
+  gap: 3rem;
+  margin-bottom: 2rem;
+  
+  @media (max-width: 768px) {
+    flex-direction: column;
+    gap: 2rem;
+  }
+`;
+
+const LeftSection = styled.div`
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+`;
+
+const RightSection = styled.div`
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 `;
 
 const SuccessIcon = styled.div`
@@ -201,31 +232,35 @@ const Step6Download: React.FC<StepProps> = (props) => {
 
   return (
     <DownloadContainer>
-      <SuccessIcon>✓</SuccessIcon>
-      
-      <Title>Dit testamente er klar!</Title>
-      <Subtitle>
-        Vi har genereret dit testamente baseret på de oplysninger, du har angivet. 
-        Dokumentet downloades automatisk om få sekunder.
-      </Subtitle>
+      <MainContent>
+        <LeftSection>
+          <SuccessIcon>✓</SuccessIcon>
+          <Title>Dit testamente er klar!</Title>
+          <Subtitle>
+            Vi har genereret dit testamente baseret på de oplysninger, du har angivet. 
+            Dokumentet downloades automatisk om få sekunder.
+          </Subtitle>
+          <DownloadButton onClick={downloadPDF}>
+            Download Testamente (PDF)
+          </DownloadButton>
+        </LeftSection>
 
-      <DownloadButton onClick={downloadPDF}>
-        Download Testamente (PDF)
-      </DownloadButton>
-
-      <DonationSection>
-        <DonationTitle>💝 Støt vores arbejde</DonationTitle>
-        <DonationText>
-          Vi har hjulpet dig med at oprette dit testamente gratis. Hvis du synes, 
-          at denne service er værdifuld, kan du overveje at støtte os med en donation. 
-          Det hjælper os med at holde servicen gratis for alle.
-        </DonationText>
-        
-        <DonationInfo>
-          <strong>MobilePay: 20290178</strong><br />
-          Til Emil Sean Skovgaard
-        </DonationInfo>
-      </DonationSection>
+        <RightSection>
+          <DonationSection>
+            <DonationTitle>💝 Støt vores arbejde</DonationTitle>
+            <DonationText>
+              Vi har hjulpet dig med at oprette dit testamente gratis. Hvis du synes, 
+              at denne service er værdifuld, kan du overveje at støtte os med en donation. 
+              Det hjælper os med at holde servicen gratis for alle.
+            </DonationText>
+            
+            <DonationInfo>
+              <strong>MobilePay: 20290178</strong><br />
+              Til Emil Sean Skovgaard
+            </DonationInfo>
+          </DonationSection>
+        </RightSection>
+      </MainContent>
 
       <InfoBox>
         <InfoTitle>Hvad skal du gøre nu?</InfoTitle>
